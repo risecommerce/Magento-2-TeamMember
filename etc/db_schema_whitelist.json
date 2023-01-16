@@ -1,0 +1,16 @@
+{
+    "risecommerce_teammember": {
+        "column": {
+            "teammember_id": true,
+            "name": true,
+            "designation": true,
+            "description": true,
+            "image": true,
+            "status": true,
+            "created_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

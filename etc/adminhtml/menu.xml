@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="risecommerce_teammember::core" title="Team Member" module="Risecommerce_TeamMember" sortOrder="30" resource="Risecommerce_TeamMember::sample"/>
+        <add id="risecommerce_teammember::test" title="Members" module="Risecommerce_TeamMember" sortOrder="10" parent="risecommerce_teammember::core" action="risecommerce_teammember/items/" resource="Risecommerce_TeamMember::items"/>
+    </menu>
+</config>

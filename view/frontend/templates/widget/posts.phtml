@@ -1,0 +1,32 @@
+<?php
+$collection = $block->getTeamMemberCollection();
+$headingTitle  = $block->getTeamTitle();
+?>
+<?php if ($collection->count() > 0) : ?>
+    <div class="responsive-container-block container">
+        <p class="text-blk team-head-text">
+            Our Team&nbsp;
+        </p>
+        <div class="responsive-container-block">
+            <?php foreach ($collection as $key => $data) : ?>
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                    <div class="card">
+                        <div class="team-image-wrapper">
+                            <?php if ($data->getImage()) : ?>
+                                <img class="team-member-image" src="<?php echo $block->getBaseUrl() . 'media/' . $data->getImage(); ?>">
+                            <?php else : ?>
+                                <img class="team-member-image" src="<?php echo $block->getViewFileUrl('Risecommerce_TeamMember::images/placeholder.jpg'); ?>" />
+                       
+                            <?php endif; ?>
+                        </div>
+                        <p class="text-blk name"> <?php echo $data->getName(); ?></p>
+                        <p class="text-blk position"><?php echo $data->getDesignation(); ?></p>
+                        <p class="text-blk feature-text"><?php echo $data->getDescription(); ?></p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+<?php else : ?>
+    <h2>We couldn't find any records</h2>
+<?php endif; ?>
